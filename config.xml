@@ -4,7 +4,6 @@
         version="1" id="com.ffm.pruebaFox">
     <name>PruebaFox</name>
     <author>FFM</author>  
-    <preference name="orientation" value="portrait" />
     <preference name="permissions"                value="none"/>
     <description>pruebas de la fox</description>
     <preference name="phonegap-version" value="3.6.3" />
