@@ -5,6 +5,7 @@ function cargaAssets(){
     var item = items[0].getElementsByTagName('asset');
     var acumulador = ""
     for (var i = 0; i < item.length; i++){
+        try{
        var nombre = item[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
        var nombreAuxiliar = item[i].getElementsByTagName("nombreAuxiliar")[0].childNodes[0].nodeValue;
        var locator = item[i].getElementsByTagName("locator")[0].childNodes[0].nodeValue;
@@ -12,6 +13,10 @@ function cargaAssets(){
        acumulador += "<li onclick='lanzaVideo(\""+locator+"\")'>";
        acumulador += nombreAuxiliar;
        acumulador += "</li>";
+        } catch(e){
+            console.error(i)
+            console.error(e)
+        }
     }  
     $("#listadoAssets").html(acumulador);
     $("#listadoAssets").listview( "refresh" );
@@ -20,7 +25,8 @@ function cargaAssets(){
 
 function lanzaVideo(locator){
     $.mobile.changePage('#visor');
-    var acumulador = "<video width='320' height='240'>"+
+    var acumulador = "<video width='320' height='240' controls>"+
             "<source src='"+locator+"' type='video/mp4'>"
             +"</video>"
+    $("#visorContenido").html(acumulador)
 }
