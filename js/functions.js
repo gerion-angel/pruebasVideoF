@@ -28,7 +28,7 @@ function cargaAssets() {
 
 function lanzaVideo(locator, thumb) {
     $.mobile.changePage('#visor');
-    var acumulador = "<video width='320' height='240' controls poster='"+thumb+"'>" +
+    var acumulador = "<video width='100%' height='100%' controls poster='"+thumb+"'>" +
             "<source src='" + locator + "' type='video/mp4'>El reproductor no acepta este formato"
             + "</video>"
     $("#visorContenido").html(acumulador)
