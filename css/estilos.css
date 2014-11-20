@@ -42,3 +42,11 @@
 .ui-content{
     padding: 0px !important;
 }
+
+#visorContenido{
+    display: flex;
+}
+
+#visorContenido video{
+    margin:auto;
+}

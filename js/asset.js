@@ -49,7 +49,7 @@ function asignaTumbnail (listado){
 }
 
 function getTileAsset (asset){
-    var acumulador = "<div class='tileAsset' onclick='lanzaVideo(\""+asset.locator+"\")'>";
+    var acumulador = "<div class='tileAsset' onclick='lanzaVideo(\""+asset.locator+"\",\""+asset.thumb+"\")'>";
     acumulador += "<span style='background-image:url(\""+asset.thumb+"\")'> </span>"
     acumulador += "<span>"+asset.nombre+"</span>"
     acumulador += "</div>"
