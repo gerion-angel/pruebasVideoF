@@ -40,13 +40,20 @@
 }
 
 .ui-content{
-    padding: 0px !important;
+    padding: 0px;
+}
+
+#visor{
+    height:100%;
 }
 
 #visorContenido{
     display: flex;
+    height: 100% !important;
 }
 
 #visorContenido video{
     margin:auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
